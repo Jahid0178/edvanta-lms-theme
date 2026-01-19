@@ -168,3 +168,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Gradient classes */
+  .gradient-top-to-bottom {
+    @apply bg-linear-to-t from-secondary to-primary;
+  }
+  .gradient-left-to-right {
+    @apply bg-linear-to-r from-secondary to-primary;
+  }
+  .gradient-right-to-left {
+    @apply bg-linear-to-l from-secondary to-primary;
+  }
+}
