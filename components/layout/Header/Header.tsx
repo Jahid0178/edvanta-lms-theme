@@ -4,7 +4,7 @@ import HeaderAction from "./HeaderAction";
 
 const Header = () => {
   return (
-    <header className="bg-white py-[22px] shadow-md rounded-b-xl fixed top-0 left-0 right-0">
+    <header className="bg-white py-[22px] shadow-md rounded-b-xl fixed top-0 left-0 right-0 z-50">
       <div className="container">
         <div className="flex justify-between items-center">
           <Logo />
