@@ -13,7 +13,6 @@ const HeroSection = () => {
         alt="Hero Background"
         fill
         className="object-cover -z-10"
-        sizes="100vw"
         priority
       />
       <div className="container h-full z-10">
