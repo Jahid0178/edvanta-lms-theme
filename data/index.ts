@@ -1,4 +1,8 @@
-import { HeaderNavigationLink, Category } from "@/typescript/types";
+import {
+  HeaderNavigationLink,
+  Category,
+  WhyChooseFeature,
+} from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
 export const headerNavigationLinks: HeaderNavigationLink[] = [
@@ -89,5 +93,29 @@ export const topCategories: Category[] = [
     slug: "cyber-security",
     count: 6,
     icon: "shield-check",
+  },
+];
+
+export const whyChooseFeatures: WhyChooseFeature[] = [
+  {
+    id: 1,
+    title: "Flexible Learning",
+    description:
+      "Choose between online video sessions or in- person meetings. Learn at your own pace.",
+    icon: "zap",
+  },
+  {
+    id: 2,
+    title: "Verified Instructors",
+    description:
+      "All tutors are verified professionals with proven expertise in their fields. Learn with confidence.",
+    icon: "shield",
+  },
+  {
+    id: 3,
+    title: "Personalized Sessions",
+    description:
+      "One-on-one attention tailored to your goals. Get the exact help you need to succeed.",
+    icon: "target",
   },
 ];
