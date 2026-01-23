@@ -12,3 +12,10 @@ export type Category = {
   count: number;
   icon: keyof typeof dynamicIconImports;
 };
+
+export type WhyChooseFeature = {
+  id: number;
+  title: string;
+  description: string;
+  icon: keyof typeof dynamicIconImports;
+};
