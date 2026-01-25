@@ -2,6 +2,7 @@ import {
   HeaderNavigationLink,
   Category,
   WhyChooseFeature,
+  Faq,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -117,5 +118,38 @@ export const whyChooseFeatures: WhyChooseFeature[] = [
     description:
       "One-on-one attention tailored to your goals. Get the exact help you need to succeed.",
     icon: "target",
+  },
+];
+
+export const faqs: Faq[] = [
+  {
+    id: 1,
+    question: "How do I enroll in a course?",
+    answer:
+      "Enrolling is simple. Just create an account, choose your desired course, and complete the checkout process. Once enrolled, the course will be instantly available in your dashboard.",
+  },
+  {
+    id: 2,
+    question: "Can I access the courses on mobile devices?",
+    answer:
+      "Yes! Edvanta LMS is fully responsive. You can access all courses seamlessly from desktops, tablets, and mobile devices without any limitations.",
+  },
+  {
+    id: 3,
+    question: "Do the courses include certificates?",
+    answer:
+      "Absolutely. After successfully completing a course, you will receive a downloadable certificate that you can share on LinkedIn or include in your professional portfolio.",
+  },
+  {
+    id: 4,
+    question: "What payment methods are supported?",
+    answer:
+      "We support multiple secure payment methods including credit/debit cards and popular online payment gateways. All transactions are encrypted and safe.",
+  },
+  {
+    id: 5,
+    question: "Is there a refund policy?",
+    answer:
+      "Yes, we offer a 30-day refund policy. If you are not satisfied with a course, you can request a full refund within 30 days of purchase—no questions asked.",
   },
 ];

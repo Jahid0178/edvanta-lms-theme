@@ -19,3 +19,9 @@ export type WhyChooseFeature = {
   description: string;
   icon: keyof typeof dynamicIconImports;
 };
+
+export type Faq = {
+  id: number;
+  question: string;
+  answer: string;
+};
