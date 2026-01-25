@@ -170,6 +170,9 @@
 }
 
 @layer utilities {
+  .section {
+    @apply py-[100px];
+  }
   /* Gradient classes */
   .gradient-top-to-bottom {
     @apply bg-linear-to-t from-secondary to-primary;
@@ -179,6 +182,9 @@
   }
   .gradient-right-to-left {
     @apply bg-linear-to-l from-secondary to-primary;
+  }
+  .gradient-bottom-to-top {
+    @apply bg-linear-to-b from-secondary to-primary;
   }
 }
 

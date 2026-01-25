@@ -5,6 +5,7 @@ import ClientSection from "@/components/containers/home/ClientSection";
 import PopularCategorySection from "@/components/containers/home/PopularCategorySection";
 import WhyChooseSection from "../components/containers/home/WhyChooseSection";
 import FaqSection from "@/components/containers/home/FaqSection";
+import InstructorSection from "@/components/containers/home/InstructorSection";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <PopularCategorySection />
       <WhyChooseSection />
       <FaqSection />
+      <InstructorSection />
     </React.Fragment>
   );
 };
