@@ -3,6 +3,7 @@ import {
   Category,
   WhyChooseFeature,
   Faq,
+  Instructor,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -151,5 +152,88 @@ export const faqs: Faq[] = [
     question: "Is there a refund policy?",
     answer:
       "Yes, we offer a 30-day refund policy. If you are not satisfied with a course, you can request a full refund within 30 days of purchase—no questions asked.",
+  },
+];
+
+export const instructors: Instructor[] = [
+  {
+    id: 1,
+    name: "Alex Carter",
+    image: "/images/instructors/instructor-1.jpg",
+    description:
+      "Alex Carter is a senior software engineer with over 10 years of experience building scalable web applications. He enjoys mentoring developers and simplifying complex concepts.",
+    slug: "alex-carter",
+    socials: [
+      {
+        name: "X",
+        href: "https://x.com",
+        icon: "twitter",
+      },
+      {
+        name: "LinkedIn",
+        href: "https://linkedin.com",
+        icon: "linkedin",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Sarah Williams",
+    image: "/images/instructors/instructor-2.jpg",
+    description:
+      "Sarah Williams is a UI/UX designer specializing in user-centered design. She has helped hundreds of students improve their design skills through practical projects.",
+    slug: "sarah-williams",
+    socials: [
+      {
+        name: "X",
+        href: "https://x.com",
+        icon: "twitter",
+      },
+      {
+        name: "LinkedIn",
+        href: "https://linkedin.com",
+        icon: "linkedin",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Michael Brown",
+    image: "/images/instructors/instructor-3.jpg",
+    description:
+      "Michael Brown is a data analyst with expertise in data visualization and analytics. He focuses on making complex data easy to understand for learners.",
+    slug: "michael-brown",
+    socials: [
+      {
+        name: "X",
+        href: "https://x.com",
+        icon: "twitter",
+      },
+      {
+        name: "LinkedIn",
+        href: "https://linkedin.com",
+        icon: "linkedin",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Emily Johnson",
+    image: "/images/instructors/instructor-4.jpg",
+    description:
+      "Emily Johnson is a digital marketing specialist with years of hands-on experience. She teaches practical strategies for growing brands and online businesses.",
+    slug: "emily-johnson",
+    socials: [
+      {
+        name: "X",
+        href: "https://x.com",
+        icon: "twitter",
+      },
+      {
+        name: "LinkedIn",
+        href: "https://linkedin.com",
+        icon: "linkedin",
+      },
+    ],
   },
 ];

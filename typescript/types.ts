@@ -25,3 +25,16 @@ export type Faq = {
   question: string;
   answer: string;
 };
+
+export type Instructor = {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  slug: string;
+  socials: {
+    name: string;
+    href: string;
+    icon: keyof typeof dynamicIconImports;
+  }[];
+};
