@@ -7,6 +7,7 @@ import WhyChooseSection from "../components/containers/home/WhyChooseSection";
 import FaqSection from "@/components/containers/home/FaqSection";
 import InstructorSection from "@/components/containers/home/InstructorSection";
 import FeaturedCourseSection from "@/components/containers/home/FeaturedCourseSection";
+import FeedbackSection from "@/components/containers/home/FeedbackSection";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <WhyChooseSection />
       <FaqSection />
       <InstructorSection />
+      <FeedbackSection />
     </React.Fragment>
   );
 };

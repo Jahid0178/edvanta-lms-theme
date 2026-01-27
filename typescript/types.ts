@@ -62,3 +62,11 @@ export type Course = {
     enrolledStudents: number;
   };
 };
+
+export type Feedback = {
+  id: number;
+  name: string;
+  image: string;
+  role: string;
+  review: string;
+};

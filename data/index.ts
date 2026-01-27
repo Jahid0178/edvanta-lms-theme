@@ -5,6 +5,7 @@ import {
   Faq,
   Instructor,
   Course,
+  Feedback,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -367,5 +368,56 @@ export const courses: Course[] = [
       hours: "15h 20m",
       enrolledStudents: 243,
     },
+  },
+];
+
+export const feedbacks: Feedback[] = [
+  {
+    id: 1,
+    name: "John Doe",
+    image: "/images/feedbacks/feedback-1.jpg",
+    role: "UI/UX Designer",
+    review:
+      "I had a great experience with Edvanta LMS. The platform is user-friendly, and the courses are well-structured. Highly recommended!",
+  },
+  {
+    id: 2,
+    name: "Samantha Lee",
+    image: "/images/feedbacks/feedback-2.jpg",
+    role: "UI/UX Designer",
+    review:
+      "The instructors are very knowledgeable and explain concepts clearly. I feel much more confident in my skills now!",
+  },
+  {
+    id: 3,
+    name: "Michael Carter",
+    image: "/images/feedbacks/feedback-3.jpg",
+    role: "Software Engineer",
+    review:
+      "Edvanta LMS has exceeded my expectations. The course content is engaging, and the platform is easy to navigate.",
+  },
+  {
+    id: 4,
+    name: "Emily Watson",
+    image: "/images/feedbacks/feedback-4.jpg",
+    role: "Digital Marketer",
+    review:
+      "I loved the hands-on projects in the courses. They really help to understand and apply what I’ve learned in real-world scenarios.",
+  },
+  {
+    id: 5,
+    name: "Alex Morgan",
+    image: "/images/feedbacks/feedback-5.jpg",
+    role: "Student",
+    review:
+      "The learning experience is top-notch! I appreciate the support from instructors and the detailed course materials.",
+  },
+  {
+    id: 6,
+    name: "Jonathan Reed",
+    image: "/images/feedbacks/feedback-6.jpg",
+    role: "Digital Marketer",
+    review:
+      "Fantastic LMS! The platform is smooth, and the courses are updated regularly. I highly recommend it to anyone looking to improve their skills.",
   },
 ];
