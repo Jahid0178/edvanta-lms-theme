@@ -21,7 +21,7 @@ const SectionHeader = ({
     >
       <h2 className={`text-3xl font-semibold ${titleClassName}`}>{title}</h2>
       {description && (
-        <p className={`text-[#555555] text-sm ${descriptionClassName}`}>
+        <p className={`text-[#555555] text-lg ${descriptionClassName}`}>
           {description}
         </p>
       )}

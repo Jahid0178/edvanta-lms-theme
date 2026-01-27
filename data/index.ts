@@ -6,6 +6,7 @@ import {
   Instructor,
   Course,
   Feedback,
+  Membership,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -419,5 +420,46 @@ export const feedbacks: Feedback[] = [
     role: "Digital Marketer",
     review:
       "Fantastic LMS! The platform is smooth, and the courses are updated regularly. I highly recommend it to anyone looking to improve their skills.",
+  },
+];
+
+// Membership Plans
+export const memberships: Membership[] = [
+  {
+    id: 1,
+    name: "Free Plan",
+    description: "Perfect for getting started",
+    price: 0,
+    period: "month",
+    isPopular: false,
+    features: [
+      "Browse all instructors & skills",
+      "Book unlimited sessions",
+      "Online & offline options",
+      "Rate & review instructors",
+    ],
+    button: {
+      label: "Get Started Free",
+      link: "/pricing",
+    },
+  },
+  {
+    id: 2,
+    name: "Premium Plan",
+    description: "Unlock unlimited learning",
+    price: 29,
+    period: "month",
+    isPopular: true,
+    features: [
+      "Everything in Free",
+      "20% discount on all sessions",
+      "Priority booking & scheduling",
+      "Access to exclusive workshops",
+      "Dedicated support team",
+    ],
+    button: {
+      label: "Upgrade to Premium",
+      link: "/pricing",
+    },
   },
 ];

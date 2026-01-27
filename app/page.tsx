@@ -8,6 +8,7 @@ import FaqSection from "@/components/containers/home/FaqSection";
 import InstructorSection from "@/components/containers/home/InstructorSection";
 import FeaturedCourseSection from "@/components/containers/home/FeaturedCourseSection";
 import FeedbackSection from "@/components/containers/home/FeedbackSection";
+import MembershipSection from "@/components/containers/home/MembershipSection";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <FaqSection />
       <InstructorSection />
       <FeedbackSection />
+      <MembershipSection />
     </React.Fragment>
   );
 };
