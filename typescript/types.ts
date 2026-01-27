@@ -30,11 +30,14 @@ export type Instructor = {
   id: number;
   name: string;
   image: string;
-  description: string;
+  role: string;
   slug: string;
   socials: {
     name: string;
     href: string;
     icon: keyof typeof dynamicIconImports;
   }[];
+  rating: number;
+  courseCount: number;
+  studentCount: number;
 };

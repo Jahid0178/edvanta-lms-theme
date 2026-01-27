@@ -160,8 +160,7 @@ export const instructors: Instructor[] = [
     id: 1,
     name: "Alex Carter",
     image: "/images/instructors/instructor-1.jpg",
-    description:
-      "Alex Carter is a senior software engineer with over 10 years of experience building scalable web applications. He enjoys mentoring developers and simplifying complex concepts.",
+    role: "Senior Software Engineer",
     slug: "alex-carter",
     socials: [
       {
@@ -175,13 +174,15 @@ export const instructors: Instructor[] = [
         icon: "linkedin",
       },
     ],
+    rating: 4.9,
+    courseCount: 12,
+    studentCount: 1200,
   },
   {
     id: 2,
     name: "Sarah Williams",
     image: "/images/instructors/instructor-2.jpg",
-    description:
-      "Sarah Williams is a UI/UX designer specializing in user-centered design. She has helped hundreds of students improve their design skills through practical projects.",
+    role: "UI/UX Designer",
     slug: "sarah-williams",
     socials: [
       {
@@ -195,13 +196,15 @@ export const instructors: Instructor[] = [
         icon: "linkedin",
       },
     ],
+    rating: 4.8,
+    courseCount: 8,
+    studentCount: 800,
   },
   {
     id: 3,
     name: "Michael Brown",
     image: "/images/instructors/instructor-3.jpg",
-    description:
-      "Michael Brown is a data analyst with expertise in data visualization and analytics. He focuses on making complex data easy to understand for learners.",
+    role: "Data Analyst",
     slug: "michael-brown",
     socials: [
       {
@@ -215,13 +218,15 @@ export const instructors: Instructor[] = [
         icon: "linkedin",
       },
     ],
+    rating: 4.7,
+    courseCount: 6,
+    studentCount: 600,
   },
   {
     id: 4,
     name: "Emily Johnson",
     image: "/images/instructors/instructor-4.jpg",
-    description:
-      "Emily Johnson is a digital marketing specialist with years of hands-on experience. She teaches practical strategies for growing brands and online businesses.",
+    role: "Digital Marketing Specialist",
     slug: "emily-johnson",
     socials: [
       {
@@ -235,5 +240,8 @@ export const instructors: Instructor[] = [
         icon: "linkedin",
       },
     ],
+    rating: 4.6,
+    courseCount: 4,
+    studentCount: 400,
   },
 ];
