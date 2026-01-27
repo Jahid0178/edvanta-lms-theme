@@ -6,6 +6,7 @@ import PopularCategorySection from "@/components/containers/home/PopularCategory
 import WhyChooseSection from "../components/containers/home/WhyChooseSection";
 import FaqSection from "@/components/containers/home/FaqSection";
 import InstructorSection from "@/components/containers/home/InstructorSection";
+import FeaturedCourseSection from "@/components/containers/home/FeaturedCourseSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <HeroSection />
       <ClientSection />
       <PopularCategorySection />
+      <FeaturedCourseSection />
       <WhyChooseSection />
       <FaqSection />
       <InstructorSection />

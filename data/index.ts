@@ -4,6 +4,7 @@ import {
   WhyChooseFeature,
   Faq,
   Instructor,
+  Course,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -243,5 +244,128 @@ export const instructors: Instructor[] = [
     rating: 4.6,
     courseCount: 4,
     studentCount: 400,
+  },
+];
+
+export const courses: Course[] = [
+  {
+    id: 1,
+    title: "Complete CCNA Training",
+    slug: "complete-ccna-training",
+    image: "/images/courses/course-1.jpg",
+    category: "IT",
+    entryLevel: "Beginner",
+    rating: 4.8,
+    reviewCount: 3200,
+    price: 129,
+    instructor: {
+      name: "Michael Carter",
+      url: "/images/instructors/instructor-1.jpg",
+    },
+    metaData: {
+      lesson: "45",
+      hours: "19h 30m",
+      enrolledStudents: 35,
+    },
+  },
+  {
+    id: 2,
+    title: "UI-UX Design Career Track Program",
+    slug: "ui-ux-design-career-track-program",
+    image: "/images/courses/course-2.jpg",
+    category: "Design",
+    entryLevel: "Beginner",
+    rating: 4.9,
+    reviewCount: 540,
+    price: 149,
+    instructor: {
+      name: "Samantha Lee",
+      url: "/images/instructors/instructor-2.jpg",
+    },
+    metaData: {
+      lesson: "52",
+      hours: "20h 20m",
+      enrolledStudents: 182,
+    },
+  },
+  {
+    id: 3,
+    title: "Full Stack Web Development with JavaScript (MERN) & AI",
+    slug: "full-stack-web-development-mern-ai",
+    image: "/images/courses/course-3.jpg",
+    category: "Web Development",
+    entryLevel: "Intermediate",
+    rating: 4.7,
+    reviewCount: 610,
+    price: 199,
+    instructor: {
+      name: "Daniel Brooks",
+      url: "/images/instructors/instructor-3.jpg",
+    },
+    metaData: {
+      lesson: "78",
+      hours: "15h 20m",
+      enrolledStudents: 215,
+    },
+  },
+  {
+    id: 4,
+    title: "Master AI Automation & Build AI Agents (No Code)",
+    slug: "master-ai-automation-build-ai-agents-no-code",
+    image: "/images/courses/course-4.jpg",
+    category: "AI",
+    entryLevel: "Beginner",
+    rating: 4.8,
+    reviewCount: 430,
+    price: 179,
+    instructor: {
+      name: "Emily Watson",
+      url: "/images/instructors/instructor-4.jpg",
+    },
+    metaData: {
+      lesson: "40",
+      hours: "10h 30m",
+      enrolledStudents: 164,
+    },
+  },
+  {
+    id: 5,
+    title: "Full Stack Digital Marketing 2026",
+    slug: "full-stack-digital-marketing-2026",
+    image: "/images/courses/course-5.jpg",
+    category: "Digital Marketing",
+    entryLevel: "Beginner",
+    rating: 4.6,
+    reviewCount: 290,
+    price: 139,
+    instructor: {
+      name: "Alex Morgan",
+      url: "/images/instructors/instructor-1.jpg",
+    },
+    metaData: {
+      lesson: "55",
+      hours: "12h 20m",
+      enrolledStudents: 98,
+    },
+  },
+  {
+    id: 6,
+    title: "Full Stack Web Development with Python, Django, React & AI",
+    slug: "full-stack-web-development-python-django-react-ai",
+    image: "/images/courses/course-6.jpg",
+    category: "Web Development",
+    entryLevel: "Intermediate",
+    rating: 4.9,
+    reviewCount: 720,
+    price: 219,
+    instructor: {
+      name: "Jonathan Reed",
+      url: "/images/instructors/instructor-2.jpg",
+    },
+    metaData: {
+      lesson: "85",
+      hours: "15h 20m",
+      enrolledStudents: 243,
+    },
   },
 ];
