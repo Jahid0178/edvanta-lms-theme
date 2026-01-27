@@ -70,3 +70,17 @@ export type Feedback = {
   role: string;
   review: string;
 };
+
+export type Membership = {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  period: string;
+  isPopular: boolean;
+  features: string[];
+  button: {
+    label: string;
+    link: string;
+  };
+};
