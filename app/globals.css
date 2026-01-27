@@ -186,6 +186,9 @@
   .gradient-bottom-to-top {
     @apply bg-linear-to-b from-secondary to-primary;
   }
+  .hover-effect {
+    @apply hover:drop-shadow-[0_10px_10px_rgba(74,22,189,0.2)] hover:-translate-y-1 hover:border-primary transition-all;
+  }
 }
 
 .glass-card {

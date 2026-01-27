@@ -41,3 +41,24 @@ export type Instructor = {
   courseCount: number;
   studentCount: number;
 };
+
+export type Course = {
+  id: number;
+  title: string;
+  slug: string;
+  image: string;
+  category: string;
+  entryLevel: string;
+  rating: number;
+  reviewCount: number;
+  price: number;
+  instructor: {
+    name: string;
+    url: string;
+  };
+  metaData: {
+    lesson: string;
+    hours: string;
+    enrolledStudents: number;
+  };
+};
