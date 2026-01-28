@@ -8,6 +8,7 @@ import {
   Feedback,
   Membership,
   HowItWork,
+  FooterSocialLink,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -504,5 +505,56 @@ export const howItWorks: HowItWork[] = [
       text: "text-fuchsia-500",
       background: "bg-fuchsia-500/10",
     },
+  },
+];
+
+export const footerQuickLinks: { id: number; title: string; href: string }[] = [
+  {
+    id: 1,
+    title: "Categories",
+    href: "/categories",
+  },
+  {
+    id: 2,
+    title: "Courses",
+    href: "/courses",
+  },
+  {
+    id: 3,
+    title: "Memberships",
+    href: "/memberships",
+  },
+  {
+    id: 4,
+    title: "About Us",
+    href: "/about-us",
+  },
+  {
+    id: 5,
+    title: "Contact Us",
+    href: "/contact-us",
+  },
+];
+
+export const footerSocialLinks: FooterSocialLink[] = [
+  {
+    id: 1,
+    icon: "facebook",
+    url: "#",
+  },
+  {
+    id: 2,
+    icon: "twitter",
+    url: "#",
+  },
+  {
+    id: 3,
+    icon: "instagram",
+    url: "#",
+  },
+  {
+    id: 4,
+    icon: "linkedin",
+    url: "#",
   },
 ];
