@@ -84,3 +84,16 @@ export type Membership = {
     link: string;
   };
 };
+
+export type HowItWork = {
+  id: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: keyof typeof dynamicIconImports;
+  reverse: boolean;
+  color: {
+    text: string;
+    background: string;
+  };
+};
