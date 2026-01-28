@@ -7,6 +7,7 @@ import {
   Course,
   Feedback,
   Membership,
+  HowItWork,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -460,6 +461,48 @@ export const memberships: Membership[] = [
     button: {
       label: "Upgrade to Premium",
       link: "/pricing",
+    },
+  },
+];
+
+export const howItWorks: HowItWork[] = [
+  {
+    id: 1,
+    title: "Choose Your Course",
+    subtitle: "01",
+    description:
+      "Browse our extensive library and select a course that matches your goals.",
+    icon: "search",
+    reverse: false,
+    color: {
+      text: "text-blue-500",
+      background: "bg-blue-500/10",
+    },
+  },
+  {
+    id: 2,
+    title: "Learn from Experts",
+    subtitle: "02",
+    description:
+      "Watch high-quality video lessons and interact with instructors.",
+    icon: "upload",
+    reverse: true,
+    color: {
+      text: "text-orange-500",
+      background: "bg-orange-500/10",
+    },
+  },
+  {
+    id: 3,
+    title: "Practice & Get Certified",
+    subtitle: "03",
+    description:
+      "Complete projects, assessments, and earn certificates to showcase your skills.",
+    icon: "award",
+    reverse: false,
+    color: {
+      text: "text-fuchsia-500",
+      background: "bg-fuchsia-500/10",
     },
   },
 ];
