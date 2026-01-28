@@ -10,6 +10,7 @@ import FeaturedCourseSection from "@/components/containers/home/FeaturedCourseSe
 import FeedbackSection from "@/components/containers/home/FeedbackSection";
 import MembershipSection from "@/components/containers/home/MembershipSection";
 import HowItWorksSection from "../components/containers/home/HowItWorksSection";
+import Footer from "@/components/layout/footer/Footer";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <InstructorSection />
       <FeedbackSection />
       <MembershipSection />
+      <Footer />
     </React.Fragment>
   );
 };

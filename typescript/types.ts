@@ -97,3 +97,9 @@ export type HowItWork = {
     background: string;
   };
 };
+
+export type FooterSocialLink = {
+  id: number;
+  icon: keyof typeof dynamicIconImports;
+  url: string;
+};
