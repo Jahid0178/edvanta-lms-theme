@@ -8,11 +8,11 @@ const HowItWorksSection = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <SectionHeader
               title="How It Works"
-              titleClassName="text-[56px]"
+              titleClassName="text-3xl lg:text-[56px]"
             />
             <ul className="flex flex-col gap-8 mt-6">
               {howItWorks.map((item) => (
@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
               alt="How It Works"
               width={1050}
               height={1050}
-              className="w-full h-full"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>
@@ -44,7 +44,7 @@ const HowItWorksItem = ({ item }: { item: HowItWork }) => {
       <div
         className={`flex items-center gap-6 ${item.reverse ? "flex-row-reverse" : "flex-row"}`}
       >
-        <h3 className="text-5xl md:text-6xl lg:text-9xl text-gray-300">
+        <h3 className="hidden md:block text-5xl md:text-6xl lg:text-9xl text-gray-300">
           {item.subtitle}
         </h3>
         <div className="flex flex-row items-center gap-4 p-6 border rounded-2xl shadow-[0_22px_53px_-6px_rgba(65,77,96,0.3)] bg-white">

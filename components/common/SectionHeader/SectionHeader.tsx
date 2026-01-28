@@ -9,11 +9,11 @@ interface Args {
 
 const SectionHeader = ({
   title,
-  description,
-  position,
-  className,
-  titleClassName,
-  descriptionClassName,
+  description = "",
+  position = "left",
+  className = "",
+  titleClassName = "",
+  descriptionClassName = "",
 }: Args) => {
   return (
     <div
