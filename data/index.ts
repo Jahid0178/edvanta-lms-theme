@@ -558,3 +558,14 @@ export const footerSocialLinks: FooterSocialLink[] = [
     url: "#",
   },
 ];
+
+export const premiumBenefits: string[] = [
+  "Unlimited access to all premium courses",
+  "Official certificates upon completion",
+  "1-on-1 mentorship sessions",
+  "Priority support from instructors",
+  "Exclusive live workshops and Q&A sessions",
+  "Access to private community forums",
+  "Early access to new courses",
+  "Downloadable resources and materials",
+];
