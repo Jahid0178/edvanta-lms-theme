@@ -103,3 +103,10 @@ export type FooterSocialLink = {
   icon: keyof typeof dynamicIconImports;
   url: string;
 };
+
+export type Stats = {
+  id: number;
+  icon: keyof typeof dynamicIconImports;
+  title: string;
+  subtitle: string;
+};
