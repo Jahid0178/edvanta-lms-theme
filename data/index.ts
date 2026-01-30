@@ -9,6 +9,7 @@ import {
   Membership,
   HowItWork,
   FooterSocialLink,
+  Stats,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -568,4 +569,31 @@ export const premiumBenefits: string[] = [
   "Access to private community forums",
   "Early access to new courses",
   "Downloadable resources and materials",
+];
+
+export const aboutStats: Stats[] = [
+  {
+    id: 1,
+    icon: "earth",
+    title: "150+",
+    subtitle: "Countries",
+  },
+  {
+    id: 2,
+    icon: "users",
+    title: "2,000+",
+    subtitle: "Expert Instructors",
+  },
+  {
+    id: 3,
+    icon: "user",
+    title: "50,000+",
+    subtitle: "Active Students",
+  },
+  {
+    id: 4,
+    icon: "book-open-text",
+    title: "5,000+",
+    subtitle: "Total Courses",
+  },
 ];
