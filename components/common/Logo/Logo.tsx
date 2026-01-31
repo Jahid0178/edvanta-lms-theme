@@ -8,7 +8,10 @@ interface Args {
 
 const Logo = ({ redirectUrl = "/", className = "" }: Args) => {
   return (
-    <Link href={redirectUrl}>
+    <Link
+      href={redirectUrl}
+      className="inline-block"
+    >
       <h3
         className={`text-3xl lg:text-5xl font-bold gradient-top-to-bottom bg-clip-text text-transparent ${className}`}
       >
