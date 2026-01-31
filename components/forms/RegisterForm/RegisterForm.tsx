@@ -19,35 +19,55 @@ import { FaGoogle, FaApple } from "react-icons/fa";
 import { Controller, useForm } from "react-hook-form";
 import { ArrowRight } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { loginSchema, LoginSchema } from "@/validation";
+import { registerSchema, RegisterSchema } from "@/validation";
 import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const form = useForm({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(registerSchema),
     defaultValues: {
+      fullName: "",
       email: "",
       password: "",
-      remember: false,
+      agreeToTerms: false,
     },
   });
 
-  const onSubmit = (data: LoginSchema) => {
-    // Implement login logic here
+  const onSubmit = (data: RegisterSchema) => {
+    // Implement register logic here
     console.log(data);
-    toast.success("Login successful");
+    toast.success("Register successful");
   };
 
   return (
     <div className="w-full max-w-[450px] space-y-8 p-3">
       <Logo redirectUrl="/" />
       <SectionHeader
-        title="Welcome Back!"
-        description="Enter your credentials to access your account"
+        title="Create your account"
+        description="Start your learning journey today"
       />
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <FieldSet>
           <FieldGroup>
+            <Controller
+              name="fullName"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel htmlFor="fullName">Full Name</FieldLabel>
+                  <Input
+                    {...field}
+                    id="fullName"
+                    type="text"
+                    placeholder="Enter your full name"
+                    aria-invalid={fieldState.invalid}
+                  />
+                  {fieldState.error && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
             <Controller
               name="email"
               control={form.control}
@@ -86,9 +106,9 @@ const LoginForm = () => {
                 </Field>
               )}
             />
-            <Field className="grid grid-cols-2">
+            <Field>
               <Controller
-                name="remember"
+                name="agreeToTerms"
                 control={form.control}
                 render={({ field, fieldState }) => (
                   <Field
@@ -96,17 +116,30 @@ const LoginForm = () => {
                     data-invalid={fieldState.invalid}
                   >
                     <Checkbox
-                      id="remember"
+                      id="agreeToTerms"
                       checked={field.value}
                       onCheckedChange={(checked) => field.onChange(checked)}
                       onBlur={field.onBlur}
                       className="rounded-full data-[state=checked]:bg-indigo-500 data-[state=checked]:border-indigo-500 border-indigo-500"
                     />
                     <FieldLabel
-                      htmlFor="remember"
+                      htmlFor="agreeToTerms"
                       className="text-gray-500"
                     >
-                      Remember me
+                      I agree to the{" "}
+                      <Link
+                        href="#"
+                        className="text-indigo-500 hover:underline"
+                      >
+                        Terms of Service
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        href="#"
+                        className="text-indigo-500 hover:underline"
+                      >
+                        Privacy Policy
+                      </Link>
                     </FieldLabel>
                     {fieldState.error && (
                       <FieldError errors={[fieldState.error]} />
@@ -114,20 +147,12 @@ const LoginForm = () => {
                   </Field>
                 )}
               />
-              <Field className="text-end">
-                <Link
-                  href="/auth/forgot-password"
-                  className="text-sm text-indigo-500 hover:underline"
-                >
-                  Forgot password?
-                </Link>
-              </Field>
             </Field>
             <Button
               type="submit"
               className="w-full gradient-left-to-right text-base"
             >
-              Sign In
+              Create Account
               <ArrowRight size={16} />
             </Button>
           </FieldGroup>
@@ -151,16 +176,16 @@ const LoginForm = () => {
         </Button>
       </Field>
       <div className="text-center">
-        Don't have an account?{" "}
+        Already have an account?{" "}
         <Link
-          href="/auth/register"
+          href="/auth/login"
           className="text-indigo-500 hover:underline"
         >
-          Sign up
+          Sign in
         </Link>
       </div>
     </div>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
