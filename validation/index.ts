@@ -25,6 +25,20 @@ export const registerSchema = z.object({
     .default(false),
 });
 
+export const contactSchema = z.object({
+  name: z.string({ error: "Please enter your name" }).min(3, {
+    error: "Name must be at least 3 characters long",
+  }),
+  email: z.email({ error: "Please enter a valid email address" }),
+  subject: z.string({ error: "Please enter a subject" }).min(3, {
+    error: "Subject must be at least 3 characters long",
+  }),
+  message: z.string({ error: "Please enter a message" }).min(10, {
+    error: "Message must be at least 10 characters long",
+  }),
+});
+
 // Types
 export type LoginSchema = z.infer<typeof loginSchema>;
 export type RegisterSchema = z.infer<typeof registerSchema>;
+export type ContactSchema = z.infer<typeof contactSchema>;

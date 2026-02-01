@@ -10,6 +10,7 @@ import {
   HowItWork,
   FooterSocialLink,
   Stats,
+  ContactInformation,
 } from "@/typescript/types";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 
@@ -595,5 +596,26 @@ export const aboutStats: Stats[] = [
     icon: "book-open-text",
     title: "5,000+",
     subtitle: "Total Courses",
+  },
+];
+
+export const contactInformations: ContactInformation[] = [
+  {
+    id: 1,
+    icon: "mail",
+    title: "Email",
+    content: "hello@gmail.com",
+  },
+  {
+    id: 2,
+    icon: "phone",
+    title: "Phone",
+    content: "+123 456 789",
+  },
+  {
+    id: 3,
+    icon: "map-pin",
+    title: "Address",
+    content: "123 Main St, Anytown, USA",
   },
 ];
