@@ -110,3 +110,10 @@ export type Stats = {
   title: string;
   subtitle: string;
 };
+
+export type ContactInformation = {
+  id: number;
+  icon: keyof typeof dynamicIconImports;
+  title: string;
+  content: string;
+};
