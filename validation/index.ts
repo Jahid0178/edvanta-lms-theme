@@ -38,7 +38,16 @@ export const contactSchema = z.object({
   }),
 });
 
+// Filter validation
+export const courseFilterSchema = z.object({
+  search: z.string().optional(),
+  category: z.string().optional(),
+  level: z.string().optional(),
+  popularity: z.string().optional(),
+});
+
 // Types
 export type LoginSchema = z.infer<typeof loginSchema>;
 export type RegisterSchema = z.infer<typeof registerSchema>;
 export type ContactSchema = z.infer<typeof contactSchema>;
+export type CourseFilterSchema = z.infer<typeof courseFilterSchema>;
