@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Sparkle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { topCategories } from "@/data";
+import { categories } from "@/data";
 import CategoryCard from "@/components/cards/CategoryCard";
 import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
 
@@ -36,7 +36,7 @@ const PopularCategorySection = () => {
         </div>
         {/* Category Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[52px] mt-[52px]">
-          {topCategories.map((category) => (
+          {categories.slice(0, 8).map((category) => (
             <CategoryCard
               key={category.id}
               category={category}

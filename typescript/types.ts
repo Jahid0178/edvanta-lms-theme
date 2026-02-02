@@ -10,7 +10,12 @@ export type Category = {
   title: string;
   slug: string;
   count: number;
+  description: string;
   icon: keyof typeof dynamicIconImports;
+  meta: {
+    bg: string;
+    color: string;
+  };
 };
 
 export type WhyChooseFeature = {
