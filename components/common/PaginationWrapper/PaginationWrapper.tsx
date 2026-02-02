@@ -7,15 +7,15 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  PaginationEllipsis,
 } from "@/components/ui/pagination";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 interface Args {
   totalPages: number;
 }
 
 const PaginationWrapper = ({ totalPages }: Args) => {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   const currentPage = Number(searchParams.get("page")) || 1;
@@ -34,6 +34,34 @@ const PaginationWrapper = ({ totalPages }: Args) => {
 
   if (totalPages <= 1) return null;
 
+  const getPages = () => {
+    const pages: (number | "ellipsis")[] = [];
+
+    if (currentPage > 2) {
+      pages.push(1);
+    }
+
+    if (currentPage > 3) {
+      pages.push("ellipsis");
+    }
+
+    for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+      if (i > 0 && i <= totalPages) {
+        pages.push(i);
+      }
+    }
+
+    if (currentPage < totalPages - 2) {
+      pages.push("ellipsis");
+    }
+
+    if (currentPage < totalPages - 1) {
+      pages.push(totalPages);
+    }
+
+    return [...new Set(pages)];
+  };
+
   return (
     <Pagination className="mt-8">
       <PaginationContent>
@@ -48,11 +76,13 @@ const PaginationWrapper = ({ totalPages }: Args) => {
           />
         </PaginationItem>
 
-        {/* Page Numbers */}
-        {Array.from({ length: totalPages }).map((_, index) => {
-          const page = index + 1;
-
-          return (
+        {/* Page Numbers + Ellipsis */}
+        {getPages().map((page, index) =>
+          page === "ellipsis" ? (
+            <PaginationItem key={`ellipsis-${index}`}>
+              <PaginationEllipsis />
+            </PaginationItem>
+          ) : (
             <PaginationItem key={page}>
               <PaginationLink
                 href={createPageURL(page)}
@@ -61,8 +91,8 @@ const PaginationWrapper = ({ totalPages }: Args) => {
                 {page}
               </PaginationLink>
             </PaginationItem>
-          );
-        })}
+          ),
+        )}
 
         {/* Next */}
         <PaginationItem>
