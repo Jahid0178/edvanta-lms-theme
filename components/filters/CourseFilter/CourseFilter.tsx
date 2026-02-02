@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { use } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
@@ -17,24 +17,25 @@ import { CourseFilterSchema, courseFilterSchema } from "@/validation";
 import { Field, FieldGroup } from "@/components/ui/field";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const CourseFilter = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const form = useForm<CourseFilterSchema>({
     resolver: zodResolver(courseFilterSchema),
     defaultValues: {
-      search: searchParams.get("search") ?? "",
-      category: searchParams.get("category") ?? "",
-      level: searchParams.get("level") ?? "",
-      popularity: searchParams.get("popularity") ?? "",
+      search: searchParams.get("search") || "",
+      category: searchParams.get("category") || "",
+      level: searchParams.get("level") || "",
+      popularity: searchParams.get("popularity") || "",
     },
   });
 
   const onSubmit = (data: CourseFilterSchema) => {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(searchParams.toString());
 
     Object.entries(data).forEach(([key, value]) => {
       if (value) {
@@ -44,7 +45,7 @@ const CourseFilter = () => {
       }
     });
 
-    router.push(`?${params.toString()}`);
+    router.push(`${pathname}?${params.toString()}`);
   };
 
   return (

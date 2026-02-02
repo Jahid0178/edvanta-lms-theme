@@ -6,7 +6,17 @@ import CourseFilter from "@/components/filters/CourseFilter/CourseFilter";
 import CourseFilterSkeleton from "@/components/skeletons/CourseFilterSkeleton";
 import PaginationWrapper from "@/components/common/PaginationWrapper/PaginationWrapper";
 
-const CoursesPage = () => {
+interface Args {
+  searchParams: Promise<{
+    search?: string;
+    category?: string;
+    level?: string;
+    popularity?: string;
+  }>;
+}
+
+const CoursesPage = async ({ searchParams }: Args) => {
+  await searchParams;
   return (
     <section className="section bg-linear-to-t from-white to-blue-200/50">
       <div className="container mt-[42px]">
