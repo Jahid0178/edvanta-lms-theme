@@ -1,4 +1,9 @@
 import {
+  CategoryFilter,
+  LearningLevel,
+  PopularityLevel,
+} from "@/typescript/interface";
+import {
   HeaderNavigationLink,
   Category,
   WhyChooseFeature,
@@ -705,5 +710,100 @@ export const contactInformations: ContactInformation[] = [
     icon: "map-pin",
     title: "Address",
     content: "123 Main St, Anytown, USA",
+  },
+];
+
+// Filters data
+export const categoriesFilters: CategoryFilter[] = [
+  {
+    id: 1,
+    title: "Development",
+    value: "development",
+  },
+  {
+    id: 2,
+    title: "Design",
+    value: "design",
+  },
+  {
+    id: 3,
+    title: "Marketing",
+    value: "marketing",
+  },
+  {
+    id: 4,
+    title: "Photography",
+    value: "photography",
+  },
+  {
+    id: 5,
+    title: "Music",
+    value: "music",
+  },
+  {
+    id: 6,
+    title: "Business",
+    value: "business",
+  },
+  {
+    id: 7,
+    title: "AI & ML",
+    value: "ai-ml",
+  },
+  {
+    id: 8,
+    title: "Health",
+    value: "health",
+  },
+  {
+    id: 9,
+    title: "Fitness",
+    value: "fitness",
+  },
+  {
+    id: 10,
+    title: "Cooking",
+    value: "cooking",
+  },
+  {
+    id: 11,
+    title: "Languages",
+    value: "languages",
+  },
+  {
+    id: 12,
+    title: "Personal Dev",
+    value: "personal-dev",
+  },
+];
+
+export const learningLevels: LearningLevel[] = [
+  {
+    id: 1,
+    title: "Beginner",
+    value: "beginner",
+  },
+  {
+    id: 2,
+    title: "Intermediate",
+    value: "intermediate",
+  },
+  {
+    id: 3,
+    title: "Advanced",
+    value: "advanced",
+  },
+];
+
+export const popularityLevels: PopularityLevel[] = [
+  {
+    id: 1,
+    title: "Most Popular",
+    value: "most-popular",
+  },
+  {
+    id: 2,
+    title: "Top Rated",
+    value: "top-rated",
   },
 ];
