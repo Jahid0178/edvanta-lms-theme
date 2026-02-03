@@ -38,6 +38,30 @@ export const contactSchema = z.object({
   }),
 });
 
+export const forgotPasswordSchema = z.object({
+  email: z.email({ error: "Please enter a valid email address" }),
+});
+
+export const verifyCodeSchema = z.object({
+  code: z.string().min(6, { error: "Code must be 6 digits" }),
+});
+
+export const resetPasswordSchema = z
+  .object({
+    password: z
+      .string()
+      .min(8, { error: "Password must be at least 8 characters long" })
+      .max(32, { error: "Password must be at most 32 characters long" }),
+    confirmPassword: z
+      .string()
+      .min(8, { error: "Password must be at least 8 characters long" })
+      .max(32, { error: "Password must be at most 32 characters long" }),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    error: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
+
 // Filter validation
 export const courseFilterSchema = z.object({
   search: z.string().optional(),
@@ -51,3 +75,6 @@ export type LoginSchema = z.infer<typeof loginSchema>;
 export type RegisterSchema = z.infer<typeof registerSchema>;
 export type ContactSchema = z.infer<typeof contactSchema>;
 export type CourseFilterSchema = z.infer<typeof courseFilterSchema>;
+export type ForgotPasswordSchema = z.infer<typeof forgotPasswordSchema>;
+export type VerifyCodeSchema = z.infer<typeof verifyCodeSchema>;
+export type ResetPasswordSchema = z.infer<typeof resetPasswordSchema>;
