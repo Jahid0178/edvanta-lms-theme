@@ -62,6 +62,22 @@ export const resetPasswordSchema = z
     path: ["confirmPassword"],
   });
 
+export const checkoutSchema = z.object({
+  email: z.email({ error: "Please enter a valid email address" }),
+  cardName: z.string({ error: "Please enter your name" }).min(3, {
+    error: "Name must be at least 3 characters long",
+  }),
+  cardNumber: z.string({ error: "Please enter your card number" }).min(16, {
+    error: "Card number must be at least 16 digits long",
+  }),
+  cardExpiry: z.string({ error: "Please enter your card expiry" }).min(4, {
+    error: "Card expiry must be at least 4 digits long",
+  }),
+  cardCVV: z.string({ error: "Please enter your card CVV" }).min(3, {
+    error: "Card CVV must be at least 3 digits long",
+  }),
+});
+
 // Filter validation
 export const courseFilterSchema = z.object({
   search: z.string().optional(),
@@ -78,3 +94,4 @@ export type CourseFilterSchema = z.infer<typeof courseFilterSchema>;
 export type ForgotPasswordSchema = z.infer<typeof forgotPasswordSchema>;
 export type VerifyCodeSchema = z.infer<typeof verifyCodeSchema>;
 export type ResetPasswordSchema = z.infer<typeof resetPasswordSchema>;
+export type CheckoutSchema = z.infer<typeof checkoutSchema>;
